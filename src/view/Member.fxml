@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="788.0" style="-fx-background-color: #e7bee6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MemberController">
+   <children>
+      <TableView fx:id="table" layoutX="38.0" layoutY="67.0" prefHeight="258.0" prefWidth="648.0">
+         <columns>
+            <TableColumn id="id" fx:id="colid" prefWidth="56.0" text="id" />
+            <TableColumn id="name" fx:id="colname" prefWidth="127.20001220703125" text="name" />
+            <TableColumn id="contactNo" fx:id="colContactNo" prefWidth="148.79998779296875" text="contactNo" />
+            <TableColumn id="address" fx:id="colAddress" prefWidth="85.60003662109375" text="address" />
+            <TableColumn id="fee" fx:id="colfee" prefWidth="139.20001220703125" text="fee" />
+            <TableColumn id="btnDelete" fx:id="coldelete" prefWidth="88.7999267578125" text="Delete" />
+         </columns>
+      </TableView>
+      <Label layoutX="258.0" layoutY="14.0" prefHeight="47.0" prefWidth="245.0" text="Member List" textFill="#38383a">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="343.0" layoutY="363.0" prefHeight="26.0" prefWidth="231.0" promptText="Address" />
+      <TextField fx:id="txtContactNo" layoutX="38.0" layoutY="414.0" prefHeight="26.0" prefWidth="246.0" promptText="ContactNo" />
+      <TextField fx:id="txtName" layoutX="39.0" layoutY="363.0" prefHeight="26.0" prefWidth="246.0" promptText="Name" />
+      <JFXButton layoutX="612.0" layoutY="363.0" onAction="#OnActionAdd" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: white;" text="Add Member" />
+      <JFXButton layoutX="612.0" layoutY="414.0" onAction="#OnActionUpdate" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: white;" text="Update Member" />
+      <TextField fx:id="txtfee" layoutX="343.0" layoutY="415.0" promptText="fee" />
+   </children>
+</AnchorPane>

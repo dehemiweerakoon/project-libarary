@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="693.0" style="-fx-background-color: #e6e2d6;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CategoryController">
+   <children>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="24.0" prefHeight="17.0" prefWidth="252.0" text="Book Category" textFill="#bc7474">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="9.0" layoutY="85.0" prefHeight="302.0" prefWidth="400.0">
+        <columns>
+          <TableColumn id="CategoryID" fx:id="colid" prefWidth="130.40003204345703" text="Id" />
+          <TableColumn id="CategoryName" fx:id="colname" prefWidth="133.6000213623047" text="Category" />
+            <TableColumn id="btnDelete" fx:id="coldelete" prefWidth="133.6000213623047" text="Delete" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="436.0" layoutY="306.0" onAction="#btnAddOnAction" style="-fx-background-color: #42e373;" text="Add Category" textFill="#282b29" />
+      <JFXButton layoutX="570.0" layoutY="306.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #42e373;" text="Update Category" textFill="#282b29" />
+      <ScrollPane layoutX="425.0" layoutY="136.0" prefHeight="158.0" prefWidth="252.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="247.0">
+               <children>
+                  <TextField fx:id="catName" layoutX="26.0" layoutY="27.0" prefHeight="26.0" prefWidth="176.0" promptText="CategoryName" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

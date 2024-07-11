@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BorrowController">
+   <children>
+      <Label layoutX="163.0" layoutY="6.0" text="Book Issue Infromation">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9684210419654846" green="0.15781676769256592" blue="0.846830427646637" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.38499999046325684" green="0.4268781542778015" blue="0.550000011920929" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="41.0" layoutY="72.0" prefHeight="18.0" prefWidth="99.0" text="Member ID" />
+      <TextField fx:id="txtmemberId" layoutX="151.0" layoutY="69.0" />
+      <Button layoutX="379.0" layoutY="69.0" mnemonicParsing="false" onAction="#OnMemeberCheck" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #cbc3f5;" text="Check" />
+      <Label layoutX="41.0" layoutY="123.0" prefHeight="18.0" prefWidth="99.0" text="Book ID" />
+      <TextField fx:id="txtBookId" layoutX="151.0" layoutY="119.0" />
+      <Button layoutX="379.0" layoutY="119.0" mnemonicParsing="false" onAction="#OnBookCheck" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #cbc3f5;" text="Check" />
+      <Label layoutX="41.0" layoutY="176.0" prefHeight="18.0" prefWidth="99.0" text="Issue Date" />
+      <DatePicker fx:id="dateissue" layoutX="151.0" layoutY="172.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button layoutX="177.0" layoutY="233.0" mnemonicParsing="false" onAction="#onButtonIssue" prefHeight="26.0" prefWidth="123.0" text="Issue Book" />
+   </children>
+</AnchorPane>

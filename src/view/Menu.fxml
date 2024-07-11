@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="613.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+   <children>
+      <Label alignment="CENTER" layoutX="98.0" layoutY="20.0" prefHeight="55.0" prefWidth="383.0" text="Main Menu">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.5037878927859394">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.43157893419265747" green="0.06553605943918228" blue="0.06553605943918228" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.07999999821186066" green="0.800000011920929" blue="0.2517766058444977" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Italic" size="33.0" />
+         </font>
+      </Label>
+      <Button layoutX="46.0" layoutY="118.0" mnemonicParsing="false" onAction="#btnMemberOnAction" prefHeight="46.0" prefWidth="130.0" style="-fx-background-color: #fdcf9d;" text="Manage Members ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="195.0" layoutY="118.0" mnemonicParsing="false" onAction="#btnBookCategoriesOnAction" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #ffb097;" text="Manage Book Categories ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="389.0" layoutY="118.0" mnemonicParsing="false" onAction="#btnBookOnAction" prefHeight="46.0" prefWidth="130.0" style="-fx-background-color: #7474b0;" text="Manage Books " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="111.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnBorrowingOnAction" prefHeight="46.0" prefWidth="209.0" style="-fx-background-color: #ff91af;" text="Manage Borrowing Transactions ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <JFXBadge />
+      <Button layoutX="363.0" layoutY="189.0" mnemonicParsing="false" onAction="#onReturnAction" prefHeight="46.0" prefWidth="130.0" style="-fx-background-color: #7dbbb0;" text="Return a Book" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="824.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BookController">
+   <children>
+      <TableView fx:id="table" layoutX="14.0" layoutY="61.0" prefHeight="258.0" prefWidth="793.0">
+        <columns>
+          <TableColumn id="BookID" fx:id="colid" prefWidth="56.0" text="BookID" />
+          <TableColumn id="Title" fx:id="coltitle" prefWidth="127.20001220703125" text="Title" />
+            <TableColumn id="Author" fx:id="colAuthor" prefWidth="148.79998779296875" text="Author" />
+            <TableColumn id="Category" fx:id="colCategory" prefWidth="85.60003662109375" text="Category" />
+            <TableColumn id="Year" fx:id="colyear" prefWidth="58.39996337890625" text="Year" />
+            <TableColumn id="Publisher" fx:id="colpublisher" prefWidth="122.39996337890625" text="Publisher" />
+            <TableColumn id="qty" fx:id="colQty" prefWidth="92.80010986328125" text="Qty" />
+            <TableColumn id="btnDelete" fx:id="coldelete" prefWidth="107.199951171875" text="Delete" />
+        </columns>
+      </TableView>
+      <Label layoutX="258.0" layoutY="14.0" prefHeight="47.0" prefWidth="245.0" text="Book List">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6842105388641357" green="0.05321637541055679" blue="0.05321637541055679" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="txtTitle" layoutX="38.0" layoutY="363.0" prefHeight="26.0" prefWidth="231.0" promptText="Book Title" />
+      <TextField fx:id="txtYear" layoutX="38.0" layoutY="414.0" prefHeight="26.0" prefWidth="231.0" promptText="Year" />
+      <TextField fx:id="txtPublisher" layoutX="337.0" layoutY="414.0" prefHeight="26.0" prefWidth="246.0" promptText="Publisher" />
+      <TextField fx:id="txtAuthor" layoutX="337.0" layoutY="363.0" prefHeight="26.0" prefWidth="246.0" promptText="Author" />
+      <ComboBox fx:id="cmbcategory" layoutX="337.0" layoutY="468.0" prefHeight="26.0" prefWidth="246.0" />
+      <JFXButton layoutX="665.0" layoutY="364.0" onAction="#OnActionAdd" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: white;" text="Add Book" />
+      <JFXButton layoutX="665.0" layoutY="414.0" onAction="#OnActionUpdate" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: white;" text="Update Book" />
+      <TextField fx:id="txtQty" layoutX="38.0" layoutY="468.0" prefHeight="26.0" prefWidth="231.0" promptText="Qty" />
+   </children>
+</AnchorPane>

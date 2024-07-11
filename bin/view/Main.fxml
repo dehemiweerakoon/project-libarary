@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="323.0" prefWidth="514.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutX="355.0" layoutY="252.0" onAction="#Onsubmit" prefHeight="26.0" prefWidth="81.0" style="-fx-background-color: #49a596;" text="Login" />
+      <TextField fx:id="username" layoutX="63.0" layoutY="72.0" prefHeight="26.0" prefWidth="350.0" promptText="Username" />
+      <TextField fx:id="password" layoutX="63.0" layoutY="137.0" prefHeight="26.0" prefWidth="350.0" promptText="password" />
+   </children>
+</AnchorPane>
