@@ -40,6 +40,7 @@ public class ReturnBoImpl implements ReturnBo{
         DbConnection.getDbConnection().getConnection().rollback();
         System.out.println(e);
         return false;
+        //
        }finally{
         DbConnection.getDbConnection().getConnection().setAutoCommit(true);
        }
