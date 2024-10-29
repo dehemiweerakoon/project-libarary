@@ -17,4 +17,6 @@ public interface BorrowBo {
     public ArrayList<BorrowDto> getAllBorrow() throws Exception;
 
     public ArrayList<BorrowDto> getMemberBorrowList(Integer id) throws Exception;
+
+    public ArrayList<Integer> getAllBorrowId(Integer user_id,Integer book_id) throws Exception;
 }

@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import bo.BoFactory;
 import bo.custom.BookBo;
 import bo.custom.BorrowBo;
@@ -46,7 +48,7 @@ public class ReturnController {
     private ReturnBo returnBo = BoFactory.getInstant().getBo(BoFactory.botype.RETURN);
     
     @FXML
-    void OnReturnClicked(ActionEvent event) {
+    void OnReturnClicked(ActionEvent event) throws Exception {
        getBookAndMember();
 
 
@@ -70,8 +72,12 @@ public class ReturnController {
 
         MemberDto new_memberDto = new MemberDto(memberDto.getId(), memberDto.getName(), memberDto.getContactNo(), memberDto.getAddress(),wandi);
         BookDto new_bookDto = new BookDto(bookDto.getBookID(), bookDto.getTitle(),bookDto.getAuthor(),bookDto.getCategory(), bookDto.getYear(), bookDto.getPublisher(),bookDto.getQty()+1);
+        ArrayList<Integer> id = borrowBo.getAllBorrowId(memberDto.getId(), bookDto.getBookID());
        try {
        Boolean isSaved = returnBo.saveReturn(new ReturnDto(0, borrowDto.getMember_id(), borrowDto.getBook_id(), borrowDto.getIssue_date(), borrowDto.getDue_date(),currentDateString), new_bookDto,new_memberDto);
+       for(int i :id){
+        borrowBo.deleteBorrow(i);
+       }
        if(isSaved){
         new Alert(AlertType.CONFIRMATION,"Book is Returned").show();
        }

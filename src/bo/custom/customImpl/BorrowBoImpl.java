@@ -2,6 +2,8 @@ package bo.custom.customImpl;
 
 import java.util.ArrayList;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import bo.BoFactory;
 import bo.custom.BookBo;
 import bo.custom.BorrowBo;
@@ -81,6 +83,12 @@ public class BorrowBoImpl implements BorrowBo {
         borrowDtos.add(borrow);
        }
        return borrowDtos;
+    }
+
+    @Override
+    public ArrayList<Integer> getAllBorrowId(Integer user_id, Integer book_id) throws Exception {
+      ArrayList<Integer> borrowList = borrowdao.getBookByUserAndName(user_id, book_id);
+      return borrowList;
     }
     
 }

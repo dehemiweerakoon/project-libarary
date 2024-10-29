@@ -13,7 +13,7 @@ public class MenuController {
     @FXML
     void btnBookCategoriesOnAction(ActionEvent event) throws IOException {
        Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-       stage1.close();
+       //stage1.close();
        Stage stage = new Stage();
        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/BookCategory.fxml"))));
        stage.setTitle("Book Category Form");
@@ -23,7 +23,7 @@ public class MenuController {
     @FXML
     void btnBookOnAction(ActionEvent event) throws IOException {
         Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage1.close();
+        //stage1.close();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/Book.fxml"))));
         stage.setTitle("Book Category Form");
@@ -33,7 +33,7 @@ public class MenuController {
     @FXML
     void btnBorrowingOnAction(ActionEvent event) throws IOException {
         Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage1.close();
+        //stage1.close();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/Borrow.fxml"))));
         stage.setTitle("Book Category Form");
@@ -43,7 +43,7 @@ public class MenuController {
     @FXML
     void btnMemberOnAction(ActionEvent event) throws IOException {
         Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage1.close();
+        //stage1.close();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/Member.fxml"))));
         stage.setTitle("Book Category Form");
@@ -52,7 +52,7 @@ public class MenuController {
     @FXML
     void onReturnAction(ActionEvent event) throws IOException {
         Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage1.close();
+        //stage1.close();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/Return.fxml"))));
         stage.setTitle("Book Category Form");

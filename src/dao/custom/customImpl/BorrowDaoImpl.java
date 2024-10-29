@@ -70,5 +70,16 @@ public class BorrowDaoImpl implements Borrowdao{
       }
       return borrows;
     }
+
+    @Override
+    public ArrayList<Integer> getBookByUserAndName(Integer user_id, Integer book_id) throws Exception {
+      ResultSet resultset = CrudUtill.execute("SELECT * FROM `Borrow` where member_id=?",user_id);
+      ArrayList<Integer> idList =  new ArrayList<>();
+      while (resultset.next()) {
+        int id = resultset.getInt(1);
+        idList.add(id);
+      }
+      return idList;
+    }
     
 }
