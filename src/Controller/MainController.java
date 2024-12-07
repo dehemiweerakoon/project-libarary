@@ -1,5 +1,6 @@
 package Controller;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import bo.BoFactory;
@@ -10,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -18,7 +20,7 @@ import javafx.scene.Node;
 
 public class MainController {
     @FXML
-    private TextField password;
+    private PasswordField password;
 
     @FXML
     private TextField username;
@@ -60,5 +62,12 @@ public class MainController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    void OnSignInClick(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/SignIn.fxml"))));
+        stage.setTitle("Sign In Form");
+        stage.show();
     }
 }

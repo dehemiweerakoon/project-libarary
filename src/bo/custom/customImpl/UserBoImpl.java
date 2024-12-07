@@ -14,8 +14,7 @@ public class UserBoImpl implements UserBo{
 
     @Override
     public boolean saveUser(UserDto UserDTO) throws Exception {
-       
-        throw new UnsupportedOperationException("Unimplemented method 'saveUser'");
+       return userdao.save(new User(UserDTO.getUsername(), UserDTO.getPassword(), UserDTO.getName(), UserDTO.getContactNo()));
     }
 
     @Override

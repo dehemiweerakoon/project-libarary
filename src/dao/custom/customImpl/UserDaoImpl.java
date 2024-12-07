@@ -13,13 +13,12 @@ public class UserDaoImpl implements Userdao{
     @Override
     public boolean save(User t) throws Exception {
         
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        return CrudUtill.execute("INSERT INTO `User`(username,name,contactNo,password) values(?,?,?,?)",t.getUsername(),t.getName(),t.getContactNo(),t.getPassword());
     }
 
     @Override
     public boolean delete(Integer id) throws Exception {
-        
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+       throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
 
     @Override
