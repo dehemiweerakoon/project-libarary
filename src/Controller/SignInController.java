@@ -61,7 +61,9 @@ public class SignInController {
 
     @FXML
     void Onsubmit(ActionEvent event) {
-
+        Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        // closing the stage that current opened then will open the login page automatically
+        stage1.close();
     }
 
 }

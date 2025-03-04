@@ -54,8 +54,9 @@ public class BorrowController {
 
     @FXML
     void OnMemeberCheck(ActionEvent event) {
-    int member_id = Integer.parseInt(txtmemberId.getText());
+   
     try {
+        int member_id = Integer.parseInt(txtmemberId.getText());
         if(memberBo.getMember(member_id)==null){
             new Alert(AlertType.ERROR,"Not A valid member").show();
             txtmemberId.setText("");
