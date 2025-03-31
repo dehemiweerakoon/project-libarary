@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="693.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CategoryController">
+   <children>
+      <Label alignment="CENTER" layoutX="157.0" layoutY="24.0" prefHeight="17.0" prefWidth="252.0" text="Book Category" textFill="#bc7474">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="79.0" layoutY="77.0" prefHeight="302.0" prefWidth="534.0">
+         <columns>
+            <TableColumn id="CategoryID" fx:id="colid" prefWidth="202.39998817443848" text="Id" />
+            <TableColumn id="CategoryName" fx:id="colname" prefWidth="168.79998779296875" text="Category" />
+            <TableColumn id="btnDelete" fx:id="coldelete" prefWidth="162.4000305175781" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="86.0" layoutY="497.0" onAction="#btnAddOnAction" style="-fx-background-color: #42e373;" text="Add Category" textFill="#282b29" />
+      <VBox fx:id="vbox" prefHeight="69.0" prefWidth="654.0" />
+      <TextField fx:id="catName" layoutX="79.0" layoutY="426.0" prefHeight="26.0" prefWidth="264.0" promptText="CategoryName" />
+   </children>
+</AnchorPane>

@@ -43,7 +43,7 @@ public class MainController {
                 Stage stage1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage1.close();
                 Stage stage = new Stage();
-                stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/Menu.fxml"))));
+                stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("../view/Menu copy.fxml"))));
                 stage.setTitle("Book Category");
                 stage.show();
                 

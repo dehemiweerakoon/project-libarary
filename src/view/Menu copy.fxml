@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="903.0" style="-fx-background-color: #f0f8ff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuController">
+   <children>
+      <Button layoutX="22.0" layoutY="143.0" mnemonicParsing="false" onAction="#btnMemberOnAction" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #fdcf9d;" text="Manage Members ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="22.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnBookCategoriesOnAction" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #ffb097;" text="Manage Book Categories ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="22.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnBookOnAction" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #7474b0;" text="Manage Books " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="22.0" layoutY="293.0" mnemonicParsing="false" onAction="#btnBorrowingOnAction" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #ff91af;" text="Borrowing Transactions ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <JFXBadge />
+      <Button layoutX="22.0" layoutY="376.0" mnemonicParsing="false" onAction="#onReturnAction" prefHeight="46.0" prefWidth="164.0" style="-fx-background-color: #7dbbb0;" text="Return a Book" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="46.0" fitWidth="60.0" layoutX="28.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@stack-of-books.png" />
+         </image></ImageView>
+      <Label layoutX="88.0" layoutY="35.0" prefHeight="54.0" prefWidth="117.0" text="E -  Library">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbox" layoutX="206.0" layoutY="23.0" prefHeight="586.0" prefWidth="682.0">
+         <children>
+            <ImageView fitHeight="547.0" fitWidth="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@woman-holding-tablet-touch-screen.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="78.0" prefWidth="678.0" text="Libraries and AI can be powerful partners in supporting research and learning.">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
